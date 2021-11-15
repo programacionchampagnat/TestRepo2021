@@ -52,6 +52,32 @@ def fibonacci(n):
         print(aux)
 
 
+def for_function():
+    for x in range(5):
+        print(x)
+        if(x == 3):
+            return x
+        print("--")
+    print("termino")
+
+#for_function()
+
+def while_function():
+    v = 1
+    is_odd = True
+    while is_odd:
+        v = input("give me a number: ")
+        is_odd = v % 2 != 0
+    print("your number is " + str(v))
+
+# minimo comun multiplo
+def mcm(a,b):
+    mayor = a if a >= b else b
+    for i in range(mayor, (a * b) + 1, mayor):
+        if i % a == 0 and i % b == 0:
+            return i
+
+print(mcm(9,6))
 
 # Funcion que retorne el MCM
 # Fibonacci recursivo
@@ -59,13 +85,13 @@ def fibonacci(n):
 #sum(5,7)
 #times(5,6)
 #substraction(8,9)
-#division(1,0)
+#division(7,5)
 #division(8,3)
 #fibonacci(8)
 
-print(range(5))
-print(range(-2,5))
-print(range(3,6))
-print(range(1,10,2))
-print(range(10,1))
-print(range(1,10,-1))
+#print(range(5))
+#print(range(-2,5))
+#print(range(3,6))
+#print(range(1,10,2))
+#print(range(10,1,-1))
+#print(range(1,10,3))
